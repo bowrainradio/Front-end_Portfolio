@@ -1,0 +1,63 @@
+
+
+/* === GLOBAL SETTINGS === */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color:  #f4f4f4;
+}
+
+
+/* === MAIN === */
+
+.row {
+    background-color: #fff;
+    box-shadow: 12px 12px 22px grey;
+    border-radius: 30px;
+}
+
+img {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* === BUTTON === */
+
+.btn {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* === FOOTER === */
+
+.filip {
+    font-family: 'Courier New', Courier, monospace;
+    color: #000
+}
+
+.filip:hover {
+    color: #FFCC00;
+}
