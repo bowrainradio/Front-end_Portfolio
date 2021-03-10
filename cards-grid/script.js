@@ -30,7 +30,7 @@ function insertProfiles(json) {
         }
     
         console.log(cart[i])
-        cart[i].insertAdjacentHTML('beforeend', h1String)
+        cart[i].insertAdjacentHTML('afterbegin', h1String)
         cart[i].insertAdjacentHTML('beforeend', pString)
     }
 }
