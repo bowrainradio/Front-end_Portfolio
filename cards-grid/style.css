@@ -1,0 +1,106 @@
+
+/* === GLOBAL SETTINGS === */
+
+* {
+    box-sizing: border-box;
+    font-family: "Courier New", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #37474f;
+    margin: 2rem;
+}
+
+/* === MAIN === */
+
+.wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    margin: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px 0px #FFCC00;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.banner {
+    position: absolute;
+    background-image: url(./img/background.png);
+    height: 10rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile {
+    width: 8rem;
+    clip-path: circle(60px at center);
+    margin-top: 6rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.desc {
+    margin: 1rem 2rem;
+    font-size: 0.9rem;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(37, 37, 37);
+    color: #FFCC00;
+}
+
+
+
+/* === FOOTER === */
+
+.social-links{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a{
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+   color: #FFCC00;
+}
+
+.filip {
+    margin: 10px 0 10px 0;
+}
+
+.filip a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+}
+.filip a:hover {
+    color: #FFCC00;
+}
