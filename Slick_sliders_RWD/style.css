@@ -1,0 +1,264 @@
+/* === IMPORTS === */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("./animation.css");
+/* === VARIABLES === */
+/* === MIXINS === */
+/* === GLOBAL SETTINGS === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.blue {
+  color: #FFF;
+  background-color: #215398;
+}
+
+.white {
+  color: #000;
+  background-color: #F1F6FC;
+}
+
+h1 {
+  font: 300 40px/52px "Rubik";
+}
+
+h2 {
+  font: 300 30px/52px "Rubik";
+}
+
+p {
+  font: 300 20px/32px "Rubik";
+}
+
+/* === HEADER === */
+header {
+  background-color: #FFF;
+  height: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20%;
+}
+
+header picture img {
+  width: 160px;
+  height: 38px;
+}
+
+/* === MAIN === */
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 5%;
+}
+
+.text {
+  margin-bottom: 30px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+
+/* === BOXES === */
+.box {
+  background-color: #FFF;
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
+  padding: 3%;
+  min-height: 180px;
+  margin: 10px;
+}
+
+.box h3 {
+  color: #2D3236;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.box p {
+  color: #808080;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.box picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box picture img {
+  margin-top: 20px;
+  width: 40px;
+}
+
+/* === RED DOT === */
+.red-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+/* === SLIDER === */
+#slider .box {
+  padding: 20px;
+  margin: 20px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  padding: 20px;
+}
+
+.slide-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.prev-arrow {
+  left: -40px;
+  width: 13px;
+  height: 24px;
+  background-image: url("img/arrow_prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.next-arrow {
+  right: -40px;
+  width: 13px;
+  height: 24px;
+  background-image: url("img/arrow_next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* === POPUP === */
+.love {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+}
+
+.love img {
+  width: 50px;
+  height: 50px;
+}
+
+.love:hover {
+  -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+
+#popup {
+  display: none;
+  background-color: aquamarine;
+  width: 300px;
+  padding: 20px;
+  position: absolute;
+  left: 8px;
+  top: 9px;
+  opacity: 0.8;
+}
+
+/* === FOOTER === */
+.social-links {
+  text-align: center;
+}
+
+a {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFCC00;
+}
+
+.filip {
+  padding: 10px 0 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a:hover {
+  color: #FFCC00;
+}
+
+/* === RWD === */
+@media (max-width: 768px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .love {
+    display: none;
+  }
+  #popup {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

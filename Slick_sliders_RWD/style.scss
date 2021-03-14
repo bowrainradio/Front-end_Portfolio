@@ -1,0 +1,246 @@
+/* === IMPORTS === */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url('./animation.css');
+
+/* === VARIABLES === */
+
+$font-main: 'Rubik';
+$bc-blue: #215398;
+$bc-white: #F1F6FC;
+$font-weight: 300;
+
+/* === MIXINS === */
+
+@mixin flex($flow, $justify) {
+	display: flex;
+	flex-flow: $flow;
+	justify-content: $justify;
+  }
+
+  
+/* === GLOBAL SETTINGS === */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.blue {
+	color: #FFF;
+	background-color: $bc-blue;
+}
+.white {
+	color: #000;
+	background-color: $bc-white;
+}
+
+h1 {
+	font: $font-weight 40px/52px $font-main;
+}
+h2 {
+	font: $font-weight 30px/52px $font-main;
+}
+p {
+	font: $font-weight 20px/32px $font-main;
+}
+
+/* === HEADER === */
+
+header {
+	background-color: #FFF;
+	height: 84px;
+	display: flex;
+	align-items: center;
+	padding-left: 20%;
+		picture {
+			img {
+				width: 160px;
+				height: 38px;
+			}
+		}
+}
+
+/* === MAIN === */
+
+section {
+	@include flex(column, center);
+	text-align: center;
+	padding: 5%;
+}
+
+.text {
+	margin-bottom: 30px;
+}
+
+.container {
+	@include flex(row, center);
+	gap: 12px;
+}
+
+/* === BOXES === */
+
+.box {
+	background-color: #FFF;
+	flex: 33%;
+	padding: 3%;
+	min-height: 180px;
+	margin: 10px;
+		h3 {
+			color: #2D3236;
+			font-weight: 300;
+			font-size: 20px;
+		}
+		p {
+			color: #808080;
+			font-size: 15px;
+			margin-top: 10px;
+		}
+		picture {
+			display: flex;
+			justify-content: center;
+				img {
+					margin-top: 20px;
+					width: 40px;
+				}
+		}
+}
+
+/* === RED DOT === */
+
+.red-dot {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: red;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+/* === SLIDER === */
+
+#slider {
+	.box {
+		padding: 20px;
+		margin: 20px;
+	}
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}
+
+.slide-arrow {
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	padding: 20px;
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 50%;
+		}
+}
+
+.prev-arrow {
+	left: -40px;
+	width: 13px;
+	height: 24px;
+	background-image: url('img/arrow_prev.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.next-arrow {
+	right: -40px;
+	width: 13px;
+	height: 24px;
+	background-image: url('img/arrow_next.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* === POPUP === */
+
+.love {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	cursor: pointer;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+			&:hover {
+				animation: bounce 2s infinite;
+			}
+}
+
+#popup {
+	display: none;
+	background-color: aquamarine;
+	width: 300px;
+	padding: 20px;
+	position: absolute;
+	left: 8px;
+	top: 9px;
+	opacity: 0.8;
+}
+
+/* === FOOTER === */
+
+.social-links{
+    text-align: center;
+}
+	a{
+		color: #000;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #FFCC00;
+	}
+	.filip {
+		padding: 10px 0 10px 0;
+	}
+		a {
+			text-decoration: none;
+			color: #000;
+			font-family: 'Courier New', Courier, monospace;
+		}
+		a:hover {
+			color: #FFCC00;
+		}
+
+/* === RWD === */
+
+@media (max-width: 768px) {
+
+	header {
+		justify-content: center;
+		padding: 0;
+	}
+
+	.container {
+		flex-flow: column;
+	}
+
+	.love {
+		display: none;
+	}
+	
+    #popup {
+        opacity: 0;
+    }
+}
+
