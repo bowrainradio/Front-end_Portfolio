@@ -1,0 +1,83 @@
+
+
+/* === VARIABLES === */
+
+$pixel-size: 8;
+
+
+/* === GENERAL === */
+
+body {
+    cursor: url(https://cur.cursors-4u.net/others/oth-1/oth92.ani), url(https://cur.cursors-4u.net/others/oth-1/oth92.png), auto;
+    background: rgb(24,22,22);
+    background: linear-gradient(90deg, rgba(24,22,22,1) 16%, rgba(231,54,52,1) 50%, rgba(24,22,22,1) 84%);
+}
+
+
+/* === MAIN === */
+
+.skeleton{
+    width: calc(24px * #{$pixel-size}); //1,5,6
+    height: calc(38px * #{$pixel-size});
+    // background: wheat;
+    overflow: hidden;
+    position: relative;
+    margin: 4rem auto;
+    cursor: pointer;
+    &.s-1 {
+        width: calc(34px * #{$pixel-size});
+    }
+}
+
+.skeleton_sprite {
+    &--waiting{
+        animation: moveSprite 1s steps(4) infinite;
+        height: calc(36px * #{$pixel-size});
+    }
+    &--walking{
+        animation: moveSprite 1s steps(13) infinite;
+        height: calc(36px * #{$pixel-size});
+    }
+}
+
+.skeleton_shadow {
+    position: absolute;
+    right: 10px;
+    width: calc(24px * #{$pixel-size});
+    height: calc(38px * #{$pixel-size});
+}
+
+.pixel_art {
+    image-rendering: pixelated;
+}
+
+
+/* === FOOTER === */
+
+footer {
+    position: relative;
+    top: 70px;
+}
+    .social-links {
+    text-align: center;
+    }
+
+        a {
+        color: #000;
+        text-decoration: none;;
+        font-family: 'Courier New', Courier, monospace;
+        }
+
+        a:hover {
+        color: #FFCC00;
+        }
+
+/* === ANIMATION === */
+
+@keyframes moveSprite {
+    from {
+        transform: translate3d(0px, 0, 0);
+    } to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

@@ -1,0 +1,72 @@
+/* === VARIABLES === */
+/* === GENERAL === */
+body {
+  cursor: url(https://cur.cursors-4u.net/others/oth-1/oth92.ani), url(https://cur.cursors-4u.net/others/oth-1/oth92.png), auto;
+  background: #181616;
+  background: linear-gradient(90deg, #181616 16%, #e73634 50%, #181616 84%);
+}
+
+/* === MAIN === */
+.skeleton {
+  width: calc(24px * 8);
+  height: calc(38px * 8);
+  overflow: hidden;
+  position: relative;
+  margin: 4rem auto;
+  cursor: pointer;
+}
+.skeleton.s-1 {
+  width: calc(34px * 8);
+}
+
+.skeleton_sprite--waiting {
+  animation: moveSprite 1s steps(4) infinite;
+  height: calc(36px * 8);
+}
+.skeleton_sprite--walking {
+  animation: moveSprite 1s steps(13) infinite;
+  height: calc(36px * 8);
+}
+
+.skeleton_shadow {
+  position: absolute;
+  right: 10px;
+  width: calc(24px * 8);
+  height: calc(38px * 8);
+}
+
+.pixel_art {
+  image-rendering: pixelated;
+}
+
+/* === FOOTER === */
+footer {
+  position: relative;
+  top: 70px;
+}
+
+.social-links {
+  text-align: center;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+a:hover {
+  color: #FFCC00;
+}
+
+/* === ANIMATION === */
+@keyframes moveSprite {
+  from {
+    transform: translate3d(0px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

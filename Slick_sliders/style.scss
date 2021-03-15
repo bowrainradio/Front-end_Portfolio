@@ -206,6 +206,7 @@ button {
 		color: #000;
 		cursor: pointer;
 		text-decoration: none;
+		font-family: 'Courier New', Courier, monospace;
 	}
 	a:hover {
 		color: #FFCC00;
@@ -213,14 +214,6 @@ button {
 	.filip {
 		padding: 10px 0 10px 0;
 	}
-		a {
-			text-decoration: none;
-			color: #000;
-			font-family: 'Courier New', Courier, monospace;
-		}
-		a:hover {
-			color: #FFCC00;
-		}
 
 /* === RWD === */
 
