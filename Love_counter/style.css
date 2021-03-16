@@ -31,7 +31,7 @@ p {
 }
 
 span::after {
-    content: " 🥺";
+    content: " \1F9AC";
 }
 
 #heart {
