@@ -8,7 +8,7 @@ Website_02 ====> https://bowrainradio.github.io/Front-end_Portfolio/login-page/i
 ** html, css, bootstrap
 
 Website_03 ====> https://bowrainradio.github.io/Front-end_Portfolio/cards-grid/index.html
-** html, css, js, AJAX **
+** html, css, js, JSON **
 
 Website_04 ====> https://bowrainradio.github.io/Front-end_Portfolio/Slick_sliders/index.html
 ** html, sass, jQuery, slick **
