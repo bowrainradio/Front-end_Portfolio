@@ -14,3 +14,12 @@ $(document).ready(function(){
         }
     });    
 });
+
+//reset
+
+for(let i=0; i <= 5; i++){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://api.countapi.xyz/update/filipteczalove/flyingbisons/?amount=-1");
+    xhr.responseType = "json";
+    xhr.send();
+}
